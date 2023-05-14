@@ -54,6 +54,7 @@ const homeStore = create((set) => ({
         priceBtc: coin.item.price_btc.toFixed(10),
         // coin api 가져오기
         priceUsd: (coin.item.price_btc * btcPrice).toFixed(10),
+        // 소수점 10자리까지만 ,
       };
     });
 

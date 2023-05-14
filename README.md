@@ -74,3 +74,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 **- [API](https://recharts.org/en-US)**
 
 - [chart usage](https://recharts.org/en-US)
+
+- [Network Error](https://leeseong010.tistory.com/117)
+
+- [google Fonts](https://fonts.google.com/icons?icon.query=left)
