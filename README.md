@@ -2,6 +2,43 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Libraries and Links Used
+
+**- [API](https://recharts.org/en-US)**
+
+**- [CHART USAGE](https://recharts.org/en-US)**
+
+**- [GOOGLE FONTS](https://fonts.google.com/icons?icon.query=left)**
+
+**- [FONT AWESOME](https://fontawesome.com/)**
+
+**- [Thanks! CSS infinite rotate animation](https://stackoverflow.com/questions/6410730/css-endless-rotation-animation)**
+
+```
+"proxy": "http://localhost:5000",
+
+'교차 출처 리소스 공유' 라는 뜻을 가지는 해당 정책은 서로 다른 출처의 리소스에 request를 할 때 보안상의 이유로 교차 출처 HTTP 요청을 제한하는 것이다.
+```
+
+- [proxy 해결 블로그](https://leeseong010.tistory.com/117)
+
+## Technology Used
+
+<div align="center" >
+        <img
+        width="100px"
+        height="100px"
+          src="https://cdn-icons-png.flaticon.com/512/5968/5968509.png" >
+        <img
+       width="100px"
+        height="90px"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png">
+        <img
+       width="100px"
+        height="90px"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/1280px-Sass_Logo_Color.svg.png">
+      </div>
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -68,13 +105,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-### Libraries and Links Used
-
-**- [API](https://recharts.org/en-US)**
-
-- [chart usage](https://recharts.org/en-US)
-
-- [Network Error](https://leeseong010.tistory.com/117)
-
-- [google Fonts](https://fonts.google.com/icons?icon.query=left)

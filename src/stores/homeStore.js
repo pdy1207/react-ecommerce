@@ -6,9 +6,11 @@ const homeStore = create((set) => ({
   coins: [], // 검색기능
   trending: [], // 되돌아가기
   query: "",
-
+  searching: false,
+  searched: false,
   // 검색기능
   setQuery: (e) => {
+    set({ searching: true });
     set({ query: e.target.value });
     homeStore.getState().searchCoins();
   },
@@ -28,10 +30,10 @@ const homeStore = create((set) => ({
         };
       });
 
-      set({ coins });
+      set({ coins, searching: false, searched: true });
       console.log(res.data);
     } else {
-      set({ coins: trending });
+      set({ coins: trending, searching: false, searched: false });
     }
   }, 500),
 

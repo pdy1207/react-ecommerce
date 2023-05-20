@@ -3,6 +3,11 @@ import { create } from "zustand";
 
 const showStore = create((set) => ({
   graphData: [],
+  data: null,
+
+  reset: () => {
+    set({ graphData: [], data: null });
+  },
 
   //market_chart api
   fetchData: async (id) => {
