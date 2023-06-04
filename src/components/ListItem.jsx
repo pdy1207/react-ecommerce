@@ -12,7 +12,8 @@ export default function ListItem({ coin }) {
         {coin.priceBtc && (
           <span className="home-crypto-prices">
             <span className="home-crypto-btc">
-              <img src="/bitcoin.webp" /> {coin.priceBtc} BTC
+              <img src={process.env.PUBLIC_URL + "/bitcoin.webp"} />
+              {coin.priceBtc} BTC
             </span>
             <span className="home-crypto-usd">({coin.priceUsd} USD)</span>
           </span>
