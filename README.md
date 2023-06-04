@@ -17,7 +17,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ```
 "proxy": "http://localhost:5000",
 
-'교차 출처 리소스 공유' 라는 뜻을 가지는 해당 정책은 서로 다른 출처의 리소스에 request를 할 때 보안상의 이유로 교차 출처 HTTP 요청을 제한하는 것이다.
+'교차 출처 리소스 공유' 라는 뜻을 가지는 해당 정책은 서로 다른 출처의 리소스에 
+request를 할 때 보안상의 이유로 교차 출처 HTTP 요청을 제한하는 것이다.
 ```
 
 - [proxy 해결 블로그](https://leeseong010.tistory.com/117)
