@@ -6,7 +6,7 @@ export default function Header({ back }) {
     <header className="header">
       <div className="width">
         {back && (
-          <Link to="/">
+          <Link to="/react-ecommerce/">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 960 960"
@@ -20,7 +20,7 @@ export default function Header({ back }) {
           </Link>
         )}
         <h1>
-          <Link to="/">Coiner!</Link>
+          <Link to="/react-ecommerce/">Coiner!</Link>
         </h1>
       </div>
     </header>
