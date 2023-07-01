@@ -11,7 +11,6 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route index path="/react-ecommerce/" element={<Home />} />
-      <Route index path="/react-ecommerce/" element={<Home />} />
       <Route path="/react-ecommerce/:id" element={<Show />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
