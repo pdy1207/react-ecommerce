@@ -6,7 +6,7 @@
 
 :root {
   --primary-color: #f05014;
-  --background-color: #000;
+  --background-color: #666;
 }
 
 .ui-dark {
@@ -20,11 +20,6 @@ body {
 }
 
 input[type="text"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  -o-appearance: none;
-  appearance: none;
   border: none;
   outline: none;
   display: block;

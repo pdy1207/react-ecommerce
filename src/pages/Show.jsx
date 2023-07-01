@@ -1,7 +1,6 @@
 import React from "react";
 import showStore from "../stores/showStroe";
 import { useParams } from "react-router-dom";
-import { PureComponent } from "react";
 import {
   AreaChart,
   Area,
@@ -26,7 +25,7 @@ export default function Show() {
   }, []);
 
   return (
-    <div>
+    <>
       <Header back />
       {store.data && (
         <>
@@ -98,7 +97,7 @@ export default function Show() {
           </div>
         </>
       )}
-    </div>
+    </>
 
     // 시가 총액 순위 24시간
     // 24시간 최저

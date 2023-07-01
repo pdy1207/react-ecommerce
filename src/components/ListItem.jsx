@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 export default function ListItem({ coin }) {
   return (
     <div className="home-crypto">
-      <Link to={`/${coin.id}`}>
+      <Link to={`/react-ecommerce/${coin.id}`}>
         <span className="home-crypto-image">
-          <img src={coin.image} />{" "}
+          <img src={coin.image} />
         </span>
         <span className="home-crypto-name">{coin.name}</span>
         {coin.priceBtc && (

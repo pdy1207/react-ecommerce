@@ -62,7 +62,6 @@ const homeStore = create((set) => ({
 
     console.log(coins);
     set({ coins, trending: coins });
-    // console.log(coins);
   },
 }));
 
