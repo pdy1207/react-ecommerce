@@ -21,6 +21,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 request를 할 때 보안상의 이유로 교차 출처 HTTP 요청을 제한하는 것이다.
 ```
 
+<s>으.. 배포 해당 url 앞까진 404 page를 못막네 ㅠ ㅠ</s>
+
 - [proxy 해결 블로그](https://leeseong010.tistory.com/117)
 
 ## Technology Used
