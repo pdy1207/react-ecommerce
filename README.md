@@ -33,6 +33,7 @@ For building and running the application you need:
 - [Classnames](https://www.npmjs.com/package/classnames)
 - [React Router](https://reactrouter.com/en/main)
 - [Sass](https://www.npmjs.com/package/sass)
+- [Chart Usage](https://recharts.org/en-US)
 
 
 ### Installation
@@ -76,4 +77,20 @@ $ npm start
 ### ⭐️ 
 
 ### ⭐️ 
+
+## ISSUES
+
+**- [Thanks! CSS infinite rotate animation](https://stackoverflow.com/questions/6410730/css-endless-rotation-animation)** <br/>
+**- [proxy 해결 블로그](https://leeseong010.tistory.com/117)**
+
+```
+"proxy": "http://localhost:5000",
+'교차 출처 리소스 공유' 라는 뜻을 가지는 해당 정책은 서로 다른 출처의 리소스에 
+request를 할 때 보안상의 이유로 교차 출처 HTTP 요청을 제한하는 것이다.
+```
+
+<s>으.. 배포 해당 url 앞까진 404 page를 못막네 ㅠ ㅠ</s>
+
+
+
 
