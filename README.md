@@ -1,110 +1,79 @@
-# Getting Started with Create React App
+<div align="center">
+        <img width="100%" alt="image" src="https://github.com/pdy1207/react-ecommerce/assets/110442250/d1d3a903-bd78-45b2-a4df-0f47c9430aa1">
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Libraries and Links Used
+# React Ecommerce
+> **도영 Company** <br/> **개발기간: 2023.05 ~ 2023.06** <br/> **추가작업:~**
 
-**- [API](https://recharts.org/en-US)**
+## 배포 주소
 
-**- [CHART USAGE](https://recharts.org/en-US)**
+> **Git Hub** : [pdy1207.github.io/react-ecommerce/](https://pdy1207.github.io/react-ecommerce/) <br>
 
-**- [GOOGLE FONTS](https://fonts.google.com/icons?icon.query=left)**
+## 웹개발팀 소개
 
-**- [FONT AWESOME](https://fontawesome.com/)**
+|      박도영       |  
+| :------------------------------------------------------------------------------: |
+|   <img width="200" src="https://github.com/pdy1207/Vuebangapp/assets/110442250/ca8ea844-b2cb-43bf-953c-45adc92ec459" />    |     
+|   [@pdy1207](https://github.com/pdy1207)   | 
+| Web Dev | 
 
-**- [Thanks! CSS infinite rotate animation](https://stackoverflow.com/questions/6410730/css-endless-rotation-animation)**
+## 프로젝트 소개
 
+
+## 시작 가이드
+### Requirements
+For building and running the application you need:
+
+- [Coingecko API](https://www.coingecko.com/en/api)
+- [Material Icons](https://fonts.google.com/icons)
+- [Font awesome](https://fontawesome.com/)
+- [Zustand](https://github.com/pmndrs/zustand)
+- [Axios](https://github.com/axios/axios)
+- [Classnames](https://www.npmjs.com/package/classnames)
+- [React Router](https://reactrouter.com/en/main)
+- [Sass](https://www.npmjs.com/package/sass)
+
+
+### Installation
+``` bash
+$ git clone https://github.com/pdy1207/react-ecommerce.git
+$ cd react-ecommerce
+$ npm start
 ```
-"proxy": "http://localhost:5000",
 
-'교차 출처 리소스 공유' 라는 뜻을 가지는 해당 정책은 서로 다른 출처의 리소스에 
-request를 할 때 보안상의 이유로 교차 출처 HTTP 요청을 제한하는 것이다.
-```
+## Stacks 🔧
 
-<s>으.. 배포 해당 url 앞까진 404 page를 못막네 ㅠ ㅠ</s>
+### Environment
+![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=for-the-badge&logo=Visual%20Studio%20Code&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=Git&logoColor=white)
+![Github](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white)             
 
-- [proxy 해결 블로그](https://leeseong010.tistory.com/117)
+### Development
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=Javascript&logoColor=white)
+![Bitcoin](https://img.shields.io/badge/Bitcoin-F7931A?style=for-the-badge&logo=Bitcoin&logoColor=fff)
+![Sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=Sass&logoColor=fff)
 
-## Technology Used
 
-<div align="center" >
-        <img
-        width="100px"
-        height="100px"
-          src="https://cdn-icons-png.flaticon.com/512/5968/5968509.png" >
-        <img
-       width="100px"
-        height="90px"
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png">
-        <img
-       width="100px"
-        height="90px"
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/1280px-Sass_Logo_Color.svg.png">
-      </div>
+### Config
+![npm](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)        
 
-## Available Scripts
 
-In the project directory, you can run:
+---
+## 화면 구성 🪙
+| 메인 페이지  |  소개 페이지   |
+| :-------------------------------------------: | :------------: |
+|  |  
+| 강좌 소개 페이지   |  강의 영상 페이지   |  
+| |
 
-### `npm start`
+---
+## 주요 기능 🪙
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### ⭐️ 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### ⭐️ 
 
-### `npm test`
+### ⭐️ 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
