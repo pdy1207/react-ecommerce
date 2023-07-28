@@ -1,9 +1,10 @@
-import { React, useEffect } from "react";
+import React, { useEffect } from "react";
 import homeStore from "../stores/homeStore";
 import Header from "../components/Header";
 import ListItem from "../components/ListItem";
 import classNames from "classnames";
 import styled from "styled-components";
+import { FaAdjust } from "react-icons/fa";
 
 export default function Home() {
   const store = homeStore();
@@ -16,13 +17,14 @@ export default function Home() {
     const bgMode = window.localStorage.getItem("bgMode");
     if (bgMode === "dark") {
       document.getElementsByTagName("html")[0].classList.add("ui-dark");
+    } else {
+      document.getElementsByTagName("html")[0].classList.remove("ui-dark");
     }
   }, []);
 
   const darkOnOff = () => {
-    if (
-      document.getElementsByTagName("html")[0].classList.contains("ui-dark")
-    ) {
+    const bgMode = window.localStorage.getItem("bgMode");
+    if (bgMode === "dark") {
       document.getElementsByTagName("html")[0].classList.remove("ui-dark");
       window.localStorage.setItem("bgMode", "light");
     } else {
@@ -35,38 +37,30 @@ export default function Home() {
     <Background>
       <div>
         <Header />
-        <div className="background">dark mode</div>
-        <button onClick={darkOnOff}>on/off darkMode</button>
+        <ToggleButton onClick={darkOnOff}>
+          <FaAdjust size={24} />
+        </ToggleButton>
 
         <header className="home-search">
           <div className="width">
-            <h2>Search for a coin</h2>
-            <div
-              className={classNames("home-search-input", {
-                searching: store.searching,
-              })}
-            >
+            <InputLabelWrapper className="home-search-input">
               <input
                 type="text"
+                id="inp"
                 value={store.query}
                 onChange={store.setQuery}
+                placeholder="&nbsp;"
               />
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512"
-                width="20"
-              >
-                <path
-                  fill="currentColor"
-                  d="M304 48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zm0 416a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM48 304a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm464-48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM142.9 437A48 48 0 1 0 75 369.1 48 48 0 1 0 142.9 437zm0-294.2A48 48 0 1 0 75 75a48 48 0 1 0 67.9 67.9zM369.1 437A48 48 0 1 0 437 369.1 48 48 0 1 0 369.1 437z"
-                />
-              </svg>
-            </div>
+              <span className="label">
+                <p>금일 주식 상한선을 검색해주세요 ●'◡'●</p>
+              </span>
+              <span className="focus-bg"></span>
+            </InputLabelWrapper>
           </div>
         </header>
         <div className="home-cryptos">
-          <div className="width">
-            <h2> {store.searched ? "Search results" : "Trending coins"}</h2>
+          <div className="width width-styleing">
+            <h2> {store.searched ? "Search results" : "TITLE"}</h2>
             <div className="home-cryptos-list">
               {store.coins.map((coin) => {
                 return <ListItem key={coin.id} coin={coin} />;
@@ -78,8 +72,105 @@ export default function Home() {
     </Background>
   );
 }
+
 const Background = styled.div`
   background-color: var(--background-color);
   color: var(--primary-color);
   transition: ease-in-out 0.5s;
+`;
+
+const ToggleButton = styled.button`
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: var(--primary-color);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s, color 0.3s;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+`;
+const InputLabelWrapper = styled.label`
+  position: relative;
+  margin: auto;
+  width: 100%;
+  max-width: 280px;
+  border-radius: 3px;
+  overflow: hidden;
+
+  .label {
+    position: relative;
+    top: 20px;
+    font-size: 21px;
+    font-weight: 500;
+    transform-origin: 0px 0px;
+    transform: translate3d(0px, 0px, 0px);
+    transition: all 0.2s ease 0s;
+    pointer-events: none;
+  }
+
+  .focus-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+
+  input {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    border: 0;
+    font-family: inherit;
+    padding: 16px 12px 0 12px;
+    height: 56px;
+    font-size: 16px;
+    font-weight: 400;
+    background: rgba(0, 0, 0, 0.02);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+    color: #000;
+    transition: all 0.15s ease;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.04);
+      box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.5);
+    }
+
+    &:not(:placeholder-shown) + .label {
+      color: rgba(0, 0, 0, 0.5);
+      transform: translate3d(0, -12px, 0) scale(0.75);
+    }
+
+    &:focus {
+      background: rgba(0, 0, 0, 0.05);
+      outline: none;
+      box-shadow: inset 0 -2px 0 #0077ff;
+    }
+
+    &:focus + .label {
+      color: #0077ff;
+      transform: translate3d(0, -12px, 0) scale(0.75);
+    }
+
+    &:focus + .label + .focus-bg {
+      transform: scaleX(1);
+      transition: all 0.1s ease;
+    }
+  }
 `;

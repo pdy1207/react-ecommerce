@@ -5,18 +5,18 @@
 }
 
 :root {
-  --primary-color: #f05014;
-  --background-color: #666;
+  --primary-color: #fff;
+  --background-color: #282e39;
 }
 
 .ui-dark {
-  --primary-color: blue;
-  --background-color: white;
+  --primary-color: #282e39;
+  --background-color: #fff;
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: Vampiro One;
+  animation: neon6 1.5s ease-in-out infinite alternate;
 }
 
 input[type="text"] {
@@ -30,48 +30,79 @@ input[type="text"] {
 a {
   text-decoration: none;
 }
+
 img {
   max-width: 100%;
   display: block;
 }
 
 .width {
-  max-width: 600px;
+  max-width: 849px;
   margin: 0 auto;
-  width: 92%;
+  width: 100%;
 }
 
+.width-styleing {
+  margin-top: 30px;
+  padding: 2rem 2rem 3rem 2rem;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  border-radius: 15px;
+}
 .header {
-  background: #111;
-  color: white;
-  padding: 20px 0;
+  z-index: 100;
   position: sticky;
   top: 0;
-  z-index: 10;
-  .width {
+  width: 100%;
+  height: 550px;
+  font-weight: bold;
+  text-align: center;
+  background: url(https://raw.githubusercontent.com/hudsonmarinho/header-and-footer-parallax-effect/master/assets/images/bg-header.jpg)
+    no-repeat 50% 50%;
+  background-position: center;
+  background-size: cover;
+  transition: 0.3s;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  .header_logo {
+    color: #fff;
+    margin: 0;
+    font-size: 30px;
+    text-shadow: 3px 4px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
     position: relative;
+    top: 50%;
+    padding: 2rem;
+    .header_logo--content {
+      padding-top: 6px;
+      font-size: 17px;
+    }
+    &.small {
+      font-size: 20px;
+      color: white;
+    }
   }
 
-  h1 {
-    text-align: center;
-    color: white;
-    text-transform: uppercase;
-    font-size: 20px;
-    letter-spacing: 2px;
+  &.small {
+    padding: 5%;
+    height: 100px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   }
-  a {
-    color: white;
-  }
-  svg {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    margin-top: -12px;
+
+  .wrapper-parallax {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+
+    button {
+      background: transparent;
+      border: none;
+    }
   }
 }
-
 .home-search {
-  padding: 40px 0;
+  padding: 50px 0;
   text-align: center;
   h2 {
     font-size: 26px;
@@ -86,11 +117,11 @@ img {
 }
 
 .home-cryptos {
-  padding-bottom: 60px;
+  padding-bottom: 80px;
   h2 {
-    font-size: 26px;
-    margin-bottom: 20px;
-    text-align: center;
+    font-size: 21px;
+    margin-bottom: 40px;
+    text-align: left;
   }
 }
 @keyframes rotating {
@@ -126,10 +157,6 @@ img {
     padding: 20px 0;
     border-bottom: 1px solid #ddd;
   }
-
-  span {
-    display: block;
-  }
 }
 
 .home-cryptos-list {
@@ -141,17 +168,19 @@ img {
 }
 
 .home-crypto-name {
+  text-transform: uppercase;
   flex: 1;
   font-size: 20px;
   color: var(--primary-color);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .home-crypto-btc {
-  color: #111;
-  font-size: 16px;
+  color: #900020;
+  font-weight: 500;
+  font-size: 21px;
   img {
-    width: 16px;
+    width: 25px;
     display: inline-block;
     margin: -3px 5px 0 0;
     vertical-align: middle;
@@ -159,7 +188,11 @@ img {
 }
 .home-crypto-usd {
   color: #666;
-  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  font-style: oblique;
+  font-size: 13px;
+  padding-top: 5px;
 }
 
 .show-header {
