@@ -10,13 +10,33 @@
 }
 
 .ui-dark {
-  --primary-color: #282e39;
-  --background-color: #fff;
+  --primary-color: #fff;
+  --background-color: #485266;
 }
 
 body {
   font-family: Vampiro One;
   animation: neon6 1.5s ease-in-out infinite alternate;
+  --sb-track-color: #ffffff;
+  --sb-thumb-color: #6baf8d;
+  --sb-size: 3px;
+
+  scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 10px;
+  border: 3px solid #495154;
 }
 
 input[type="text"] {
@@ -50,11 +70,12 @@ img {
   border-radius: 15px;
 }
 .header {
+  margin-bottom: 50px;
   z-index: 100;
   position: sticky;
   top: 0;
   width: 100%;
-  height: 550px;
+  height: 250px;
   font-weight: bold;
   text-align: center;
   background: url(https://raw.githubusercontent.com/hudsonmarinho/header-and-footer-parallax-effect/master/assets/images/bg-header.jpg)
@@ -70,15 +91,15 @@ img {
   .header_logo {
     color: #fff;
     margin: 0;
-    font-size: 30px;
+    font-size: 22px;
     text-shadow: 3px 4px rgba(0, 0, 0, 0.1);
     transition: 0.3s;
     position: relative;
     top: 50%;
-    padding: 2rem;
+    padding: 1rem;
     .header_logo--content {
       padding-top: 6px;
-      font-size: 17px;
+      font-size: 14px;
     }
     &.small {
       font-size: 20px;
@@ -196,15 +217,11 @@ img {
 }
 
 .show-header {
-  padding: 40px 0;
-  text-align: center;
-
   img {
     width: 80px;
     border-radius: 50%;
     margin: 0 auto;
   }
-
   h2 {
     font-size: 32px;
     margin-top: 10px;
@@ -216,27 +233,127 @@ img {
   width: 100%;
 }
 
-.show-details {
-  padding-top: 40px;
-  padding-bottom: 60px;
+#container {
+  margin-top: 5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
 
-  h2 {
-    font-size: 26px;
-    margin-bottom: 20px;
-    text-align: center;
-    margin-bottom: 20px;
+#home-price {
+  animation: neon1 1.5s ease-in-out infinite alternate;
+}
+.label {
+  animation: neon2 1.5s ease-in-out forwards alternate;
+}
+.show-title {
+  color: #ff1177;
+  animation: neon3 1.5s ease-in-out infinite alternate;
+}
+
+h2 {
+  font-size: 1em;
+  font-weight: 300;
+  text-align: center;
+  line-height: 1em;
+  padding-bottom: 1em;
+}
+
+.container th h1 {
+  font-weight: bold;
+  font-size: 1em;
+  text-align: left;
+  color: #185875;
+}
+
+.container td {
+  font-weight: normal;
+  font-size: 1em;
+  -webkit-box-shadow: 0 2px 2px -2px #0e1119;
+  -moz-box-shadow: 0 2px 2px -2px #0e1119;
+  box-shadow: 0 2px 2px -2px #0e1119;
+}
+
+.container {
+  text-align: left;
+  overflow: hidden;
+  width: 80%;
+  margin: 0 auto;
+  display: table;
+  padding: 0 0 8em 0;
+  margin-top: 5rem;
+}
+
+.container td,
+.container th {
+  color: #fff;
+  padding-bottom: 2%;
+  padding-top: 2%;
+  padding-left: 2%;
+}
+
+.container tr:nth-child(odd) {
+  background-color: #323c50;
+}
+
+.container tr:nth-child(even) {
+  background-color: #2c3446;
+}
+
+.container th {
+  background-color: #1f2739;
+}
+
+.container td:first-child {
+  color: #fb667a;
+}
+
+.container tr:hover {
+  background-color: #464a52;
+  -webkit-box-shadow: 0 6px 6px -6px #0e1119;
+  -moz-box-shadow: 0 6px 6px -6px #0e1119;
+  box-shadow: 0 6px 6px -6px #0e1119;
+}
+
+.container td:hover {
+  background-color: #fff842;
+  color: #7f7c21;
+  font-weight: bold;
+
+  box-shadow: #7f7c21 -1px 1px, #7f7c21 -2px 2px, #7f7c21 -3px 3px,
+    #7f7c21 -4px 4px, #7f7c21 -5px 5px, #7f7c21 -6px 6px;
+  transform: translate3d(6px, -6px, 0);
+
+  transition-delay: 0s;
+  transition-duration: 0.4s;
+  transition-property: all;
+  transition-timing-function: line;
+}
+
+@media (max-width: 800px) {
+  .container td:nth-child(4),
+  .container th:nth-child(4) {
+    display: none;
   }
 }
 
-.show-details-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 0;
-  border-bottom: 1px solid #ddd;
-  color: #666;
-  h3 {
-    font-size: 16px;
-    color: #111;
+@keyframes neon1 {
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff1177,
+      0 0 35px #ff1177, 0 0 40px #ff1177;
+  }
+}
+
+@keyframes neon2 {
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228dff,
+      0 0 35px #228dff, 0 0 40px #228dff, 0 0 50px #228dff, 0 0 75px #228dff;
+  }
+}
+@keyframes neon3 {
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ffdd1b,
+      0 0 35px #ffdd1b, 0 0 40px #ffdd1b, 0 0 50px #ffdd1b, 0 0 75px #ffdd1b;
   }
 }

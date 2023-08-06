@@ -8,20 +8,18 @@ export default function Header({ back }) {
 
   useEffect(() => {
     function handleScroll() {
-      // Only set the header to small if it's not already in the small state
       if (!isHeaderSmall && window.scrollY > 10) {
         setIsHeaderSmall(true);
       }
     }
 
-    // Call the handleScroll function once to set the initial state based on the scroll position
     handleScroll();
 
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [isHeaderSmall]); // Include isHeaderSmall in the dependency array to avoid stale state
+  }, [isHeaderSmall]);
 
   return (
     <header className={`header ${isHeaderSmall ? "small" : ""}`}>
@@ -33,7 +31,7 @@ export default function Header({ back }) {
             }}
           >
             <h1 className={`header_logo ${isHeaderSmall ? "small" : ""}`}>
-              StockMarket 💰{" "}
+              StockMarket 💰
               <p className="header_logo--content">
                 주식시장은 '적극적인 자에게서 참을성이 많은 자에게로' 돈이
                 넘어가도록 설계되어 있다.
